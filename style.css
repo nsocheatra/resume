@@ -1,0 +1,229 @@
+/* --- General & Body Styles --- */
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #f8f9fa;
+  color: #333;
+  font-size: 14px;
+  line-height: 1.6;
+  margin: 0;
+  padding: 20px;
+  /* Faint grid background */
+  background-image:
+    linear-gradient(#e9ecef 1px, transparent 1px),
+    linear-gradient(to right, #e9ecef 1px, transparent 1px);
+  background-size: 25px 25px;
+}
+
+.resume-container {
+  display: flex;
+  max-width: 900px;
+  margin: 20px auto;
+  background: #fff;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  position: relative;
+}
+
+h3 {
+  font-weight: 700;
+  font-size: 1.3em;
+  text-transform: uppercase;
+  margin-top: 0;
+  margin-bottom: 20px;
+  color: #000;
+}
+
+p {
+  margin: 0;
+}
+
+.light-text {
+  color: #aaa;
+}
+.small-text {
+  font-size: 0.9em;
+}
+
+.section {
+  margin-bottom: 30px;
+}
+
+/* --- Left & Right Columns --- */
+.left-column {
+  width: 38%;
+  padding: 30px;
+}
+
+.right-column {
+  width: 62%;
+  padding: 30px;
+}
+
+/* --- Left Column Specifics --- */
+.profile-pic-container {
+  background-color: #fff;
+  padding: 10px;
+  border-radius: 0 40px 0 40px;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.15);
+  margin-bottom: 30px;
+}
+.profile-pic-container img {
+  width: 100%;
+  display: block;
+  border-radius: 0 30px 0 30px;
+}
+
+.contact-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.contact-list li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  color: #555;
+}
+.contact-list i {
+  color: #ccc;
+  font-size: 1.2em;
+  width: 30px;
+  text-align: center;
+  margin-right: 10px;
+}
+
+/* --- Reusable Timeline Style (for Experience, Education, Training) --- */
+.timeline-item {
+  display: flex;
+  margin-bottom: 20px;
+}
+.timeline-years {
+  width: 60px;
+  flex-shrink: 0;
+  text-align: right;
+  padding-right: 15px;
+  color: #555;
+  font-weight: 500;
+}
+.timeline-details {
+  border-left: 2px solid #eee;
+  padding-left: 15px;
+}
+.timeline-details h4 {
+  margin: 0 0 5px;
+  font-size: 1.1em;
+  font-weight: 500;
+}
+
+/* --- Right Column Specifics --- */
+.main-header {
+  border-bottom: 2px solid #000;
+  padding-bottom: 5px;
+  margin-bottom: 20px;
+}
+.main-header h1 {
+  font-size: 3.5em;
+  line-height: 1.1;
+  font-weight: 700;
+  margin: 0;
+  text-transform: uppercase;
+}
+.main-header .outline {
+  color: transparent;
+  -webkit-text-stroke: 1.5px #000;
+  text-stroke: 1.5px #000;
+}
+.main-header h2 {
+  font-size: 1em;
+  font-weight: 500;
+  margin: 5px 0 0;
+  color: #333;
+}
+
+.profile-summary {
+  background-color: #e9ecef;
+  padding: 15px;
+  border-radius: 15px;
+  margin-bottom: 30px;
+}
+
+.language-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.language-item span {
+  width: 80px;
+}
+.progress-bar-container {
+  flex-grow: 1;
+  height: 10px;
+  border: 1px solid #000;
+  border-radius: 5px;
+  padding: 1px;
+}
+.progress-bar {
+  background: #000;
+  height: 100%;
+  border-radius: 3px;
+}
+
+.software-grid {
+  display: grid;
+  /* This change will center the 3 items perfectly */
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+  text-align: center;
+  max-width: 400px; /* Limit width to keep items from spreading too far */
+  margin: 0 auto; /* Center the grid container */
+}
+.software-item img {
+  max-width: 50px;
+  height: 50px;
+  object-fit: contain;
+  margin-bottom: 5px;
+}
+.software-item span {
+  font-size: 0.9em;
+  color: #555;
+}
+
+.footer-text {
+  position: absolute;
+  bottom: 20px;
+  right: 30px;
+  color: #ddd;
+  font-size: 1.2em;
+  font-weight: 500;
+}
+
+/* --- Responsive Design --- */
+@media (max-width: 800px) {
+  body {
+    padding: 0;
+  }
+  .resume-container {
+    flex-direction: column;
+    margin: 0;
+    width: 100%;
+    box-shadow: none;
+  }
+  .left-column,
+  .right-column {
+    width: 100%;
+    box-sizing: border-box; /* Important! */
+  }
+  .main-header h1 {
+    font-size: 2.5em;
+  }
+  .software-grid {
+    grid-template-columns: repeat(3, 1fr); /* Keep 3 columns on mobile */
+    max-width: 100%;
+  }
+  .footer-text {
+    position: static;
+    text-align: center;
+    padding: 20px;
+    background: #f8f9fa;
+    color: #ccc;
+  }
+}
